@@ -16,7 +16,7 @@ public class ThreadState {
         second.start();
         System.out.println(second.getName() + " - " + second.getState());
 
-        while (first.getState() != TERM && second.getState() != TERM) {
+        while (first.getState() != TERM || second.getState() != TERM) {
             System.out.println(first.getName() + " - " + first.getState());
             System.out.println(second.getName() + " - " + second.getState());
         }
